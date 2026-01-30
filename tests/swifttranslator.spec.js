@@ -54,7 +54,6 @@ test.describe('Singlish to Sinhala Converter Functional Tests', () => {
     await page.waitForSelector('textarea');
   });
 
-  
 const normalizeText = (text) => {
   if (!text) return "";
   return text
