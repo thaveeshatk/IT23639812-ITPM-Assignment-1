@@ -52,7 +52,7 @@ cd IT23639812-ITPM-Assignment-1
 npm install
 
 ## Step 3: Install Playwright browsers
-npx playwright instal
+npx playwright install
 
 ## Running the Tests
 npx playwright test
