@@ -1,76 +1,151 @@
-Assignment 1: option 1:  Singlish to Sinhala Transliteration Testing This repository contains the Playwright test automation project for evaluating a Singlish to Sinhala chat translator. The script reads 50 chat style Singlish test cases from an Excel file, inputs them into the web application, and automatically records the actual Sinhala output and the test status (Fail) back into the Excel sheet.
+# 🌐 IT23639812 — ITPM Assignment 1
+### Singlish → Sinhala Transliteration Testing
 
-Prerequisites Before running the script, make sure you have the following installed on your machine:
+> **Assignment 1:** Singlish to Sinhala Transliteration Testing  
+> This repository contains the Playwright test automation project for evaluating a Singlish to Sinhala chat translator. The script reads 50 chat style Singlish test cases from an Excel file, inputs them into the web application, and automatically records the actual Sinhala output and the test status (Fail) back into the Excel sheet.
 
-Python 3.11 or 3.12 Google Chrome (Recommended) Setup & Installation Download and extract the project folder. Open your Command Prompt (CMD) or terminal and navigate to the extracted folder. Update pip (optional but good practice): pip install -U pip Install the required Python dependencies: pip install playwright openpyxl Install the Playwright browsers: playwright install How to Run the Tests Open your Command Prompt inside the project directory and run the following command:
+---
 
-python IT23639812.py --excel "IT23639812.xlsx" --url "https://www.pixelssuite.com/chat-translator" --wait-ms 15000 --type-delay-ms 80 --slow-mo-ms 200 --save-every 1 --keep-open Project Structure IT23639812.py : The main Python script that runs the Playwright automation.
+## ⚙️ Prerequisites
 
-IT23639812.xlsx : The Excel file containing the 50 test scenarios. The script will write the actual results directly into this file.
+Before running the script, make sure you have the following installed on your machine:
 
-IT23639812.txt : Text file containing the Git repository link
+- 🐍 **Python** 3.11 or 3.12
+- 🌐 **Google Chrome** (Recommended)
 
-README.md : Setup and execution instructions.
+---
 
-Setup Instructions
+## 🚀 Setup & Installation
 
-Install Python
+**1.** Download and extract the project folder.
 
-Python 3.10+ is installed.
+**2.** Open your **Command Prompt (CMD)** or terminal and navigate to the extracted folder.
 
+**3.** Update pip *(optional but good practice)*:
+```bash
+pip install -U pip
+```
+
+**4.** Install the required Python dependencies:
+```bash
+pip install playwright openpyxl
+```
+
+**5.** Install the Playwright browsers:
+```bash
+playwright install
+```
+
+---
+
+## ▶️ How to Run the Tests
+
+Open your Command Prompt inside the project directory and run the following command:
+
+```bash
+python test_automation.py \
+  --excel "Assignment 1 - Test cases.xlsx" \
+  --url "https://www.pixelssuite.com/chat-translator" \
+  --wait-ms 5000 \
+  --type-delay-ms 80 \
+  --slow-mo-ms 200 \
+  --save-every 1 \
+  --keep-open
+```
+
+---
+
+## 📁 Project Structure
+
+| File | Description |
+|------|-------------|
+| `test_automation.py` | The main Python script that runs the Playwright automation. |
+| `Assignment 1 - Test cases.xlsx` | The Excel file containing the 50 test scenarios. The script will write the actual results directly into this file. |
+| `IT23639812.txt` | Text file containing the Git repository link |
+| `README.md` | Setup and execution instructions. |
+
+---
+
+## 🛠️ Setup Instructions
+
+### Install Python
+Python 3.10+ is installed.  
 Check:
+```bash
+python --version
+```
 
-bash python --version
+### Install Dependencies
+```bash
+pip install playwright openpyxl
+```
 
-Install Dependencies
+### Install Playwright Browsers
+```bash
+playwright install
+```
 
-bash pip install playwright openpyxl
+---
 
-Install Playwright Browsers
-
-bash playwright install
-
-How to Run the Script
+## 🏃 How to Run the Script
 
 Navigate to your project folder:
-
-bash cd test_automation
+```bash
+cd test_automation
+```
 
 Run:
+```bash
+python test_script.py
+```
 
-bash python test_script.py
+---
 
-Excel File Requirements
+## 📊 Excel File Requirements
 
 Your Excel file must include these columns:
 
-Column Name	Description
-Input	Singlish text
-Expected Output	Expected Sinhala translation
-Actual Output	(Auto-filled by script)
-Status	FAIL
-How It Works
+| Column Name | Description |
+|-------------|-------------|
+| Input | Singlish text |
+| Expected Output | Expected Sinhala translation |
+| Actual Output | *(Auto-filled by script)* |
+| Status | FAIL |
 
-Opens the translator website
-Finds input and output text areas
-Enters Singlish input
-Clicks Transliterate button
-Captures Sinhala output
-Compares with expected result
-Updates Excel file
-Tested Website
+---
 
-https://www.pixelssuite.com/chat-translator
-Output
+## 🔄 How It Works
+
+```
+1. Opens the translator website
+2. Finds input and output text areas
+3. Enters Singlish input
+4. Clicks Transliterate button
+5. Captures Sinhala output
+6. Compares with expected result
+7. Updates Excel file
+```
+
+---
+
+## 🌍 Tested Website
+
+🔗 [https://www.pixelssuite.com/chat-translator](https://www.pixelssuite.com/chat-translator)
+
+---
+
+## 📤 Output
 
 After execution:
 
-Actual Output column is filled
-Status column shows:
-FAIL → Incorrect translation
+- ✅ **Actual Output** column is filled
+- 🔴 **Status** column shows:
+  - `FAIL` → Incorrect translation
 
-Notes
+---
 
-Keep internet connection stable
-Do not close browser during execution
-Ensure Excel file is closed before running script
+## 📝 Notes
+
+> - Keep internet connection stable
+> - Do not close browser during execution
+> - Ensure Excel file is closed before running script
